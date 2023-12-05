@@ -1,13 +1,13 @@
-import { GetStaticProps, NextPage, NextPageContext } from "next";
+import { GetStaticProps, NextPage, NextPageContext } from 'next';
 
-import Head from "next/head";
+import Head from 'next/head';
 
 type SSGProps = {
-  message: string
-}
+  message: string;
+};
 
 const SSG: NextPage<SSGProps> = (props) => {
-  const { message } = props
+  const { message } = props;
   return (
     <div>
       <Head>
@@ -15,23 +15,22 @@ const SSG: NextPage<SSGProps> = (props) => {
         <link rel="icon" href="../src/app/favicon.ico" />
       </Head>
       <main>
-        <p>
-          このページは静的サイト生成によってビルド時に生成されたページです
-        </p>
+        <p>このページは静的サイト生成によってビルド時に生成されたページです</p>
+        <p>{message}</p>
       </main>
     </div>
-  )
-}
+  );
+};
 
-export const getStaticProps: GetStaticProps<SSGProps> =async (constext) => {
-  const timestamp = new Date().toLocaleDateString()
-  const message = `${timestamp} に getStaticProps 実行された`
+export const getStaticProps: GetStaticProps<SSGProps> = async (constext) => {
+  const timestamp = new Date().toLocaleDateString();
+  const message = `${timestamp} に getStaticProps 実行された`;
   console.log(message);
   return {
     props: {
-      message
-    }
-  }
-}
+      message,
+    },
+  };
+};
 
-export default SSG
+export default SSG;
