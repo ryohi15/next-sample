@@ -1,9 +1,7 @@
-import React from "react";
+import React from 'react';
 
 const Top = () => {
-  return (
-    <span>hello world</span>
-  )
-}
+  return <span>hello world</span>;
+};
 
-export default Top
+export default Top;
