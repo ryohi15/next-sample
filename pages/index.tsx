@@ -16,7 +16,7 @@ const Top: NextPage<TopProps> = (props) => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async (constext) => {
+export const getStaticProps: GetStaticProps = async () => {
   const timestamp = new Date().toLocaleDateString();
   const message = `${timestamp} に getStaticProps 実行された`;
   console.log(message);
