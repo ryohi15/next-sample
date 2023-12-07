@@ -17,6 +17,7 @@ const Top: NextPage<TopProps> = (props) => {
   return (
     <>
       <div className={styles.container}>
+        y
         <main className={styles.main}>
           <H1>
             Welcome to <a href="https://nextjs.org">Next.js!1</a>
